@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Haocheng Zhu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap"
+        rel="stylesheet">
   <style>
     :root {
       --bg: #f7f4ee;
@@ -237,6 +241,403 @@
         height: 150px;
       }
     }
+
+    /* Education & Publications */
+
+    .entry + .entry {
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-bottom: 8px;
+    }
+
+    .entry h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.45;
+      letter-spacing: -0.015em;
+    }
+
+    .entry-date {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .entry p {
+      margin: 5px 0;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .entry-meta {
+      color: var(--muted);
+      font-size: 14px !important;
+    }
+
+    .entry-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Education layout */
+    .edu-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) max-content;
+      gap: 8px 16px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .edu-heading h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .edu-location {
+      color: var(--muted);
+      font-size: 14px !important;
+      margin: 2px 0 10px !important;
+    }
+
+    @media (max-width: 720px) {
+      .edu-heading {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .edu-heading .entry-date {
+        font-size: 13px;
+      }
+    }
+
+
+    /* Compact Education */
+    #education .card {
+      padding: 18px 24px;
+    }
+
+    /* Reduce spacing between education entries */
+    #education .entry + .entry {
+      margin-top: 12px;
+      padding-top: 12px;
+    }
+
+    /* School name and date */
+    #education .edu-heading {
+      margin-bottom: 2px;
+    }
+
+    #education .edu-heading h3 {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    #education .entry-date {
+      font-size: 13px;
+    }
+
+    /* Education details */
+    #education .entry p {
+      margin: 2px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Location */
+    #education .edu-location {
+      margin: 0 0 5px !important;
+      font-size: 13px !important;
+      line-height: 1.4;
+    }
+
+    /* Degree and expected graduation */
+    #education .entry-meta {
+      font-size: 13px !important;
+      margin-top: 3px;
+    }
+
+
+
+    /* Publications & Presentations */
+    .publication-category {
+      margin-top: 24px;
+    }
+
+    .publication-category h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+    }
+
+    .publication-card {
+      padding: 18px 24px;
+    }
+
+    /* Individual publication */
+    .publication-item + .publication-item {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .publication-title {
+      margin: 0 0 5px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .publication-authors {
+      margin: 0 0 5px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .publication-authors strong {
+      color: var(--text);
+    }
+
+    .publication-venue {
+      margin: 0 0 7px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    /* Paper / Conference / Program links */
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .publication-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .publication-links a:hover {
+      text-decoration: underline;
+    }
+
+    .publication-disabled {
+      color: #9aa2af;
+      font-weight: 400;
+      cursor: default;
+    }
+
+    /* Mobile */
+    @media (max-width: 720px) {
+      .publication-category h3 {
+        font-size: 16px;
+      }
+
+      .publication-card {
+        padding: 16px 18px;
+      }
+
+      .publication-title {
+        font-size: 15px;
+      }
+
+      .publication-authors {
+        font-size: 13px;
+      }
+    }
+
+
+    /* My Cat Gallery */
+    .cat-intro {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .cat-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .cat-photo {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      padding: 0;
+      border: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--accent-soft);
+      cursor: pointer;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .cat-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cat-photo:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px var(--shadow);
+    }
+
+    .cat-photo:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* Hand following the mouse */
+    .pet-hand {
+      position: absolute;
+      left: var(--hand-x, 50%);
+      top: var(--hand-y, 50%);
+      transform: translate(-30%, -20%);
+      pointer-events: none;
+      opacity: 0;
+      font-size: 34px;
+      line-height: 1;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+      transition: opacity 0.12s ease;
+      z-index: 2;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .cat-photo {
+        cursor: none;
+      }
+
+      .cat-photo:hover .pet-hand {
+        opacity: 1;
+      }
+    }
+
+    .cat-photo:active .pet-hand {
+      transform: translate(-30%, -15%) scale(0.85);
+    }
+
+    /* Pat and bounce animation */
+    .cat-photo.petted img {
+      animation: catPat 0.45s ease-out;
+    }
+
+    @keyframes catPat {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      35% {
+        transform: translateY(5px) scale(0.96);
+      }
+      70% {
+        transform: translateY(-5px) scale(1.03);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Meow reaction */
+    .cat-reaction {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+
+      font-family: "Fredoka", "Trebuchet MS", sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+
+      color: #ffd45c;
+      -webkit-text-stroke: 0.6px rgba(130, 88, 24, 0.7);
+      text-shadow:
+        0 2px 4px rgba(100, 70, 25, 0.3),
+        0 0 8px rgba(255, 255, 255, 0.9);
+
+      pointer-events: none;
+      opacity: 0;
+      z-index: 3;
+    }
+
+    .cat-photo.petted .cat-reaction {
+      animation: meowBounce 0.6s ease-out both;
+    }
+
+    @keyframes meowBounce {
+      0% {
+        opacity: 0;
+        transform: translateY(5px) rotate(-6deg) scale(0.85);
+      }
+      35% {
+        opacity: 1;
+        transform: translateY(-2px) rotate(-4deg) scale(1.04);
+      }
+      75% {
+        opacity: 1;
+        transform: translateY(-2px) rotate(-4deg) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-5px) rotate(-3deg) scale(1);
+      }
+    }
+
+
+    .cat-hint {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* Mobile */
+    @media (max-width: 720px) {
+      .cat-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .cat-photo {
+        transition: none;
+      }
+
+      .cat-photo.petted img,
+      .cat-photo.petted .cat-reaction {
+        animation: none;
+      }
+
+      .cat-photo.petted .cat-reaction {
+        opacity: 1;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -249,6 +650,12 @@
 
           <div class="contact-row">
             <a class="pill" href="mailto:zhu.haocheng.r4@dc.tohoku.ac.jp">✉️ Email</a>
+            <a class="pill"
+              href="./assets/Haocheng_Zhu_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              📄 CV (PDF)
+            </a>
             <span class="pill">📍 Sendai, Japan</span>
           </div>
         </div>
@@ -258,25 +665,213 @@
         </div>
       </section>
 
-      <section>
+      <section id="about">
         <h2>About Me</h2>
         <div class="card">
           <p>
-            Welcome to my personal website. I am currently conducting research related
-            to natural language processing, with a particular interest in:
+            Hi! I'm Haocheng, a PhD student at Tohoku University
+            and a member of the
+            <a href="https://www.fai.cds.tohoku.ac.jp/"
+              target="_blank" rel="noopener noreferrer">
+              Fundamental Artificial Intelligence Laboratory (FaiLab)
+            </a>.
+            My research focuses on natural language processing
+            and large language models, particularly data selection,
+            post-training, and making model training more efficient.
           </p>
-          <ul class="research-list">
-            <li>Data selection</li>
-            <li>Efficient learning methods for language models</li>
-            <li>Model architectures</li>
-          </ul>
+
           <p>
-            Outside research, I enjoy pets and games, and I am working on becoming
-            a developer. I also like singing, playing different musical instruments,
-            and staying active through sports.
+            Outside of research, I enjoy playing PC games,
+            getting some work done at a cozy café, or recharging
+            at the gym or through basketball and football.
+            I learned the violin when I was little, and I still
+            enjoy trying out different musical instruments
+            and listening to classical music and relaxing instrumentals.
           </p>
         </div>
       </section>
+
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+
+          <!-- PhD -->
+          <div class="entry">
+            <div class="edu-heading">
+              <h3>
+                PhD ·
+                <a href="https://www.tohoku.ac.jp/en/"
+                  target="_blank" rel="noopener noreferrer">
+                  Tohoku University
+                </a>
+              </h3>
+              <span class="entry-date">Apr 2026 – Present</span>
+            </div>
+            <p class="edu-location">Sendai, Miyagi, Japan</p>
+            <p>
+              Graduate School of Information Sciences<br>
+              Department of System Information Sciences
+            </p>
+            <!-- <p class="entry-meta">
+              Expected completion: Mar 2029
+            </p> -->
+          </div>
+
+          <!-- Master's -->
+          <div class="entry">
+            <div class="edu-heading">
+              <h3>
+                Master's ·
+                <a href="https://www.tohoku.ac.jp/en/"
+                  target="_blank" rel="noopener noreferrer">
+                  Tohoku University
+                </a>
+              </h3>
+              <span class="entry-date">Apr 2024 – Mar 2026</span>
+            </div>
+            <p class="edu-location">Sendai, Miyagi, Japan</p>
+            <p>
+              Graduate School of Information Sciences<br>
+              Department of System Information Sciences
+            </p>
+            <!-- <p class="entry-meta">
+              Degree: Master of Information Sciences
+            </p> -->
+          </div>
+
+          <!-- Bachelor's -->
+          <div class="entry">
+            <div class="edu-heading">
+              <h3>
+                Bachelor's ·
+                <a href="https://www.csuft.edu.cn/"
+                  target="_blank" rel="noopener noreferrer">
+                  Central South University of Forestry and Technology
+                </a>
+              </h3>
+              <span class="entry-date">Sep 2018 – Jun 2022</span>
+            </div>
+            <p class="edu-location">Changsha, Hunan, China</p>
+            <p>
+              College of Computer and Information Engineering<br>
+              Major: Software Engineering
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Publications &amp; Presentations</h2>
+
+        <!-- International Conference Papers -->
+        <section class="publication-category">
+          <h3>Peer-Reviewed International Conference Papers</h3>
+
+          <div class="card publication-card">
+
+            <article class="publication-item">
+              <h4 class="publication-title">
+                Beyond Ranking: Role-Specific Signals for
+                Token-Budgeted SFT Data Selection
+              </h4>
+
+              <p class="publication-authors">
+                <strong>Haocheng Zhu</strong>, Tianqi Wang, Jun Suzuki
+              </p>
+
+              <p class="publication-venue">
+                Findings of the 2026 Conference on Empirical
+                Methods in Natural Language Processing
+                (EMNLP 2026)
+              </p>
+
+              <div class="publication-links">
+                <span class="publication-disabled">Paper</span>
+
+                <a href="https://2026.emnlp.org/"
+                  target="_blank" rel="noopener noreferrer">
+                  Conference ↗
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Domestic Conference Papers -->
+        <section class="publication-category">
+          <h3>Domestic Conference Papers</h3>
+
+          <div class="card publication-card">
+
+            <article class="publication-item">
+              <h4 class="publication-title" lang="ja">
+                品質と網羅性に基づくデータ選択による言語モデルの効率的学習
+              </h4>
+
+              <p class="publication-authors">
+                <strong>Haocheng Zhu</strong>, 王天奇, 鈴木潤
+              </p>
+
+              <p class="publication-venue">
+                Proceedings of the 32nd Annual Meeting of
+                the Association for Natural Language Processing
+                (NLP 2026), pp. 3264–3269
+              </p>
+
+              <div class="publication-links">
+                <a href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/C7-24.pdf"
+                  target="_blank" rel="noopener noreferrer">
+                  Paper ↗
+                </a>
+
+                <a href="https://anlp.jp/nlp2026/"
+                  target="_blank" rel="noopener noreferrer">
+                  Conference ↗
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Conference & Workshop Presentations -->
+        <section class="publication-category">
+          <h3>Conference &amp; Workshop Presentations</h3>
+
+          <div class="card publication-card">
+
+            <article class="publication-item">
+              <h4 class="publication-title" lang="ja">
+                大規模言語モデルの継続事前学習における学習率設定の検討
+              </h4>
+
+              <p class="publication-authors" lang="ja">
+                <strong>朱 灏丞</strong>, 李 宰成, 岩川 光一,
+                内藤 悠, 吉田 倖, 矢野 一樹, 工藤 彗音,
+                木村 昴, 葉 夢宇, 塩野 大輝, 佐々木 翔大,
+                斉藤 いつみ, 赤間 怜奈, 鈴木 潤
+              </p>
+
+              <p class="publication-venue">
+                NLP若手の会第19回シンポジウム (YANS 2024)
+                · Poster Presentation
+              </p>
+
+              <div class="publication-links">
+                <a href="https://yans.anlp.jp/entry/yans2024program"
+                  target="_blank" rel="noopener noreferrer">
+                  Program ↗
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+      </section>
+
 
       <section>
         <h2>Interests & Hobbies</h2>
@@ -291,6 +886,59 @@
           <li>🏋️ Fitness</li>
         </ul>
       </section>
+
+
+      <section id="cats">
+        <h2>Meet My Cat 🐾</h2>
+
+        <div class="card">
+          <p class="cat-intro">
+            Meet Xixi! Feel free to give this little one a pat!
+          </p>
+
+          <div class="cat-gallery">
+
+            <button class="cat-photo" type="button"
+                    aria-label="Pet my cat in photo 1">
+              <img src="./assets/cat-1.jpg"
+                  alt="My cat, photo 1"
+                  loading="lazy">
+              <span class="pet-hand" aria-hidden="true">🫳</span>
+              <span class="cat-reaction" aria-hidden="true">
+                Meow！
+              </span>
+            </button>
+
+            <button class="cat-photo" type="button"
+                    aria-label="Pet my cat in photo 2">
+              <img src="./assets/cat-2.jpg"
+                  alt="My cat, photo 2"
+                  loading="lazy">
+              <span class="pet-hand" aria-hidden="true">🫳</span>
+              <span class="cat-reaction" aria-hidden="true">
+                Meow！
+              </span>
+            </button>
+
+            <!-- <button class="cat-photo" type="button"
+                    aria-label="Pet my cat in photo 3">
+              <img src="./assets/cat-3.jpg"
+                  alt="My cat, photo 3"
+                  loading="lazy">
+              <span class="pet-hand" aria-hidden="true">🫳</span>
+              <span class="cat-reaction" aria-hidden="true">
+                Meow
+              </span>
+            </button> -->
+
+          </div>
+
+          <p class="cat-hint">
+            Click to pet Xixi 🐱
+          </p>
+        </div>
+      </section>
+
 
       <section>
         <h2>Languages</h2>
@@ -318,8 +966,46 @@
     </div>
 
     <footer>
-      © 2026 Haocheng Zhu. Built with HTML and CSS.
+      © 2026 Haocheng Zhu.
     </footer>
   </main>
+
+  <script>
+    document.querySelectorAll(".cat-photo").forEach(photo => {
+      let resetTimer;
+
+      // Make the petting hand follow the mouse
+      photo.addEventListener("pointermove", event => {
+        const rect = photo.getBoundingClientRect();
+
+        photo.style.setProperty(
+          "--hand-x",
+          `${event.clientX - rect.left}px`
+        );
+
+        photo.style.setProperty(
+          "--hand-y",
+          `${event.clientY - rect.top}px`
+        );
+      });
+
+      // Trigger the patting animation
+      photo.addEventListener("click", () => {
+        photo.classList.remove("petted");
+
+        // Restart the animation on repeated clicks
+        void photo.offsetWidth;
+
+        photo.classList.add("petted");
+
+        clearTimeout(resetTimer);
+
+        resetTimer = setTimeout(() => {
+          photo.classList.remove("petted");
+        }, 600);
+      });
+    });
+  </script>
+
 </body>
 </html>
